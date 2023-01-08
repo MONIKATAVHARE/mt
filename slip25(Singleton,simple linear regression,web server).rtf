@@ -39,3 +39,40 @@ class Single {
  return sing; 
  } 
  }
+
+
+
+
+
+,,,,,,,,,,,,,,,,,,,,,,ML...............
+
+import numpy as np
+
+def predict(x, weights):
+    return weights[0] + (weights[1] * x)
+
+def train(x, y, epochs, learning_rate):
+    weights = [0, 0]
+    for epoch in range(epochs):
+        for i in range(len(x)):
+            prediction = predict(x[i], weights)
+            error = prediction - y[i]
+            weights[0] = weights[0] - (learning_rate * error)
+            weights[1] = weights[1] - (learning_rate * error * x[i])
+    return weights
+x = [1500, 1600, 1700, 1750, 1800]
+y = [245000, 275000, 300000, 310000, 350000]
+
+weights = train(x, y, epochs=100, learning_rate=0.00001)
+
+house_size = 1850
+predicted_price = predict(house_size, weights)
+print(f"The predicted price for a house with size {house_size} sq ft is ${predicted_price:.2f}")
+
+Output:
+
+The predicted price for a house with size 1850 sq ft is $nan
+
+
+
+
