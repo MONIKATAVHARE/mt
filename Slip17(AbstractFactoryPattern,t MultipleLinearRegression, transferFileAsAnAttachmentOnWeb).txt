@@ -1,15 +1,10 @@
 <<                      Java                >>
 
+
 interface Shape 
 { 
 void draw(); 
-} 
-P. E. Society’s 
-Modern College of Arts, Science and Commerce, Ganeshkhind, Pune 16 
-Class: MSc(Computer Science) Sem III 
-Subject: Design Patterns 
-Collection of Programmes by Dr. Dipali Meher 
-#DipaliMeher
+}
 class RoundedRectangle implements Shape 
 { 
  public void draw() 
@@ -55,15 +50,9 @@ class ShapeFactory extends AbstractFactory
 } 
 class RoundedShapeFactory extends AbstractFactory 
 { 
- public Shape getShape( String st) 
-P. E. Society’s 
-Modern College of Arts, Science and Commerce, Ganeshkhind, Pune 16 
-Class: MSc(Computer Science) Sem III 
-Subject: Design Patterns 
-Collection of Programmes by Dr. Dipali Meher 
-#DipaliMeher
- { 
- if(st.equalsIgnoreCase("Rectangle")) 
+ public Shape getShape( String st)
+ {
+     if(st.equalsIgnoreCase("Rectangle")) 
  { return new RoundedRectangle();} 
  else if(st.equalsIgnoreCase("Square")) 
  { return new RoundedSquare();} 
@@ -97,7 +86,7 @@ public class Main
  Shape shape4=shapeFactory1.getShape("square"); 
  shape4.draw(); 
  } 
-} 
+}
 
 
 <<                        ML                           >>
