@@ -477,3 +477,5 @@ from sklearn import metrics
 print("Gaussian Naive Bayes model accuracy(in %):", metrics.accuracy_score(y_test, y_pred)*100)
 
 <                              WebFrameWork                          >
+
+https://www.youtube.com/watch?v=EOuOVYSJ4J0
